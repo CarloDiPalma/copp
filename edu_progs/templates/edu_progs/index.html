@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Учебные программы
+{% endblock %}
+
+{% block content %}
+    <h1>Учебные программы</h1>
+
+        {% for prog in progs %}
+            {{ prog.name }}
+            {{ prog.edu_start }}
+            {{ prog.is_free }}
+            {{ prog.text }}
+        {% endfor %}
+
+{% endblock content %}
