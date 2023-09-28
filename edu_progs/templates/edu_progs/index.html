@@ -8,10 +8,7 @@
     <h1>Учебные программы</h1>
 
         {% for prog in progs %}
-            {{ prog.name }}
-            {{ prog.edu_start }}
-            {{ prog.is_free }}
-            {{ prog.text }}
+            {% include 'edu_progs/includes/short_story.html' %}
         {% endfor %}
 
 {% endblock content %}

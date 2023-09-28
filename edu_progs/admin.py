@@ -1,12 +1,12 @@
 from django.contrib import admin
 
-from .models import Programm
+from .models import Program
 
 
-@admin.register(Programm)
-class PostAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'name', 'is_free')
-    list_editable = ('is_free',)
+@admin.register(Program)
+class ProgramAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'name', 'edu_start', 'is_free')
+    # list_editable = ('is_free',)
     search_fields = ('name',)
     list_filter = ('edu_start',)
     empty_value_display = '-пусто-'

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Учебные программы
+{% endblock %}
+
+{% block content %}
+    <h1>{{ program.name }}</h1>
+    <h3>{{ program.description }}</h3>
+    {% load thumbnail %}
+
+
+    {{ program.edu_start }}
+    {{ program.is_free }}
+    {{ program.text }}
+    {% thumbnail prog.image "300" crop="center" upscale=True as im %}
+        <img class="card-img my-2" src="{{ im.url }}">
+    {% endthumbnail %}
+
+{% endblock content %}
+

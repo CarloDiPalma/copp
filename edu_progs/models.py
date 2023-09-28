@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Programm(models.Model):
+class Program(models.Model):
     """Учебная программа."""
 
     name = models.CharField(max_length=140)
@@ -10,6 +10,9 @@ class Programm(models.Model):
         blank=True,
         verbose_name='Описание группы',
         help_text='Описание программы'
+    )
+    image = models.ImageField(
+        upload_to='programs/images'
     )
     reg_start = models.DateTimeField(
         verbose_name='дата начала регистрации',
