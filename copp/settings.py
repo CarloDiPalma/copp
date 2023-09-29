@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'edu_progs.apps.EduProgsConfig',
+    'news.apps.NewsConfig',
 
     'sorl.thumbnail',
 ]
