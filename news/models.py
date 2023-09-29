@@ -3,7 +3,11 @@ from django.db import models
 
 class Post(models.Model):
     """Новостной пост."""
-    h1 = models.CharField(max_length=140)
+    h1 = models.CharField(
+        max_length=140,
+        verbose_name='Заголовок поста',
+        help_text='Заголовок поста'
+    )
     description = models.CharField(
         max_length=160,
         null=True,
@@ -19,14 +23,14 @@ class Post(models.Model):
         help_text='Метатег title'
     )
     short_story = models.TextField(
-        verbose_name='Короткая новость',
-        help_text='Короткая новость'
+        verbose_name='Краткая новость',
+        help_text='Краткая новость'
     )
     full_story = models.TextField(
         null=True,
         blank=True,
-        verbose_name='Короткая новость',
-        help_text='Короткая новость'
+        verbose_name='Полная новость',
+        help_text='Полная новость'
     )
     date = models.DateTimeField(
         verbose_name='Дата публикации',

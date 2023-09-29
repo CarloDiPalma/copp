@@ -31,7 +31,8 @@ class Program(models.Model):
         verbose_name='Дата конца обучения',
     )
     hours = models.PositiveSmallIntegerField(
-        verbose_name='Трудоёмкость',
+        default=0,
+        verbose_name='Трудоёмкость'
     )
     is_intramural = models.BooleanField(
         verbose_name='Очная форма',
@@ -44,7 +45,8 @@ class Program(models.Model):
         verbose_name='Подробное описание программы',
     )
     is_published = models.BooleanField(
-        verbose_name='Программа опубликована',
+        default=False,
+        verbose_name='Программа опубликована'
     )
 
     class Meta:
