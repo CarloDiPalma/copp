@@ -6,6 +6,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('programs/', include('edu_progs.urls', namespace='edu_progs')),
+    path('news/', include('news.urls', namespace='news')),
     path('admin/', admin.site.urls),
 ]
 
