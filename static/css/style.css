@@ -1,4 +1,125 @@
 body {
-    background: #101010;
-    color: #ccc;
+    background: rgba(89,95,232,.2);
+    margin:0;
+
 }
+
+a{
+text-decoration: none;
+color:inherit}
+
+ul{
+margin:0 0 0 1.3rem;
+padding:0}
+
+ h1{color:green;
+    text-align:center;
+    font-size: 3rem
+           }
+
+ .theprog{
+ display:flex;
+ justify-content: space-around;
+ flex-wrap:wrap;
+ row-gap:2rem;
+ column-gap:1rem}
+
+ .prog_unit_sh{
+        background-color:rgba(184,182,255,.9);
+        color:white;
+        padding:1.2rem;
+        border-radius:20px;
+        flex-basis: 400px;
+       }
+
+ .link_sh{
+ text-align:center}
+
+.prog_unit_sh div:not(:last-child){margin-bottom: 10px}
+
+ .start_study_sh{
+ font-size: 1.5rem;
+ text-align:center}
+
+ .prog_image_sh img{
+ width:100%;
+ max-height:250px}
+
+ .prog_discript_sh{
+    max-height: 200px;
+    overflow: hidden;
+ }
+
+ .cost_sh{
+ text-align:right}
+
+ .header1{
+ text-align:center;
+ background: black;
+ color:white;
+ font-size:4rem;
+ padding: 1rem 0}
+
+
+footer{
+background-color:rgb(133,154,232);
+padding: 2.5rem 0 0rem 0;
+margin-top: 3rem;}
+
+.foot_flex_1{
+    padding: 3rem 0px 2rem 0px;
+    display:flex;
+    justify-content:center;
+    gap:1.3rem;
+    margin-inline:1rem;
+    flex-wrap:wrap}
+
+.foot_title{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing:.5px;
+    border-bottom: 1px solid white;
+    padding: 0px 0px .5rem 8px;
+    margin-bottom: 1.2rem
+}
+
+.foot_list{
+color: white;}
+
+.foot_elem{
+flex-basis: 300px;}
+
+.foot_contact{
+margin:0 0 0 1rem;}
+
+.foot_list ul li,.foot_contact{
+margin-bottom: .9rem;
+font-size: 1.1rem
+}
+
+.foot_logo img{
+max-width: 150px}
+
+.foot_copp_title{
+text-align:center;
+color: rgb(230,230,230);
+font-size: 1.5rem;
+margin-inline: .5rem;}
+
+.foot_copp_title a {
+padding-bottom:4px;
+border-bottom: 3px solid;
+line-height: 1.6}
+
+.last_foot{
+max-width: 1250px;
+margin: 0 auto;
+color: rgb(230,230,230);
+line-height: 1.4rem}
+
+.last_foot span{
+margin-inline: .5rem}
+
+.prelast_foot{
+padding: 1.2rem 0;
+border-top: 1px solid white}

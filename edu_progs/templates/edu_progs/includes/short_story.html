@@ -1,8 +1,29 @@
+
 {% load thumbnail %}
-<a href="{% url 'edu_progs:program-detail' prog.id %}">{{ prog.name }}</a>
-{{ prog.edu_start }}
-{{ prog.is_free }}
-{{ prog.text }}
-{% thumbnail prog.image "300" crop="center" upscale=True as im %}
-    <img class="card-img my-2" src="{{ im.url }}">
-{% endthumbnail %}
+
+<div class="prog_unit_sh">
+
+    <div class="prog_image_sh">
+        {% thumbnail prog.image "300" crop="center" upscale=True as im %}
+            <img class="card-img my-2" src="{{ im.url }}">
+        {% endthumbnail %}
+    </div>
+
+    <div class="link_sh">
+        <a href="{% url 'edu_progs:program-detail' prog.id %}">{{ prog.name }}</a>
+    </div>
+
+    <div class="start_study_sh">
+        {{ prog.edu_start }}
+    </div>
+
+    <div class="cost_sh">
+        {{ prog.is_free }}
+    </div>
+
+    <div class="prog_discript_sh">
+        {{ prog.text }}
+    </div>
+</div>
+
+
