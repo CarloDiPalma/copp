@@ -18,6 +18,7 @@ INSTALLED_APPS = [
 
     'edu_progs.apps.EduProgsConfig',
     'news.apps.NewsConfig',
+    'main.apps.MainConfig',
 
     'sorl.thumbnail',
 ]
