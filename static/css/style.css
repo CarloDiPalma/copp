@@ -1,16 +1,18 @@
 body {
     background: rgba(89,95,232,.2);
     margin:0;
-
+    font-family: Arial;
 }
 
-a{
-text-decoration: none;
-color:inherit}
+a {
+    text-decoration: none;
+    color:inherit;
+}
 
-ul{
-margin:0 0 0 1.3rem;
-padding:0}
+ul {
+    margin:0 0 0 1.3rem;
+    padding:0;
+}
 
  h1{color:green;
     text-align:center;
