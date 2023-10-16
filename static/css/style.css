@@ -14,6 +14,12 @@ ul {
     padding:0;
 }
 
+h1 {
+    color: #7283c5;
+    text-align:center;
+    font-size: 3rem;
+}
+
 h2 {
     color: #7283c5;
     text-align:center;

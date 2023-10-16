@@ -8,21 +8,14 @@
 {% block content %}
 
     <div class="container1">
-        <h2><a href="/programs/">Учебные программы</a></h2>
-
-        <div class="theprog">
-            {% for prog in progs %}
-                {% include 'edu_progs/includes/short_story.html' %}
-            {% endfor %}
-        </div>
-
-        <h2><a href="/news/">Новости</a></h2>
+        <h1>Новости</h1>
 
         <div class="theprog">
             {% for post in posts %}
                 {% include 'news/includes/short_story.html' %}
             {% endfor %}
         </div>
+
     </div>
 
 {% endblock content %}
