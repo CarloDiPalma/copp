@@ -14,11 +14,19 @@
     </header>
 
     <div class="container1">
-        <h1>Учебные программы</h1>
+        <h2>Учебные программы</h2>
 
         <div class="theprog">
             {% for prog in progs %}
                 {% include 'edu_progs/includes/short_story.html' %}
+            {% endfor %}
+        </div>
+
+        <h2>Новости</h2>
+
+        <div class="theprog">
+            {% for post in posts %}
+                {% include 'news/includes/short_story.html' %}
             {% endfor %}
         </div>
 
