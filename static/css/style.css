@@ -55,18 +55,22 @@ ul {
  .cost_sh{
  text-align:right}
 
- .header1{
- text-align:center;
- background: black;
- color:white;
- font-size:4rem;
- padding: 1rem 0}
+.header1 {
+    text-align:center;
+    background: rgb(104 123 195);
+    color:white;
+    font-size:4rem;
+    padding: 1rem 0;
+    box-shadow: 0px 12px 30px rgb(0 0 0 / 15%);
+}
 
 
-footer{
-background-color:rgb(133,154,232);
-padding: 2.5rem 0 0rem 0;
-margin-top: 3rem;}
+footer {
+    background-color:rgb(133,154,232);
+    padding: 2.5rem 0 0rem 0;
+    margin-top: 3rem;
+    box-shadow: 0px -10px 30px rgb(0 0 0 / 10%);
+}
 
 .foot_flex_1{
     padding: 3rem 0px 2rem 0px;
