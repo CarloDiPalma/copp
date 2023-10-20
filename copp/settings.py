@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'news.apps.NewsConfig',
     'main.apps.MainConfig',
+    'users.apps.UsersConfig',
 
     'sorl.thumbnail',
 ]
@@ -77,6 +78,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = "users.User"
 
 LANGUAGE_CODE = 'en-us'
 
