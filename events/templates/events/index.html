@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Мероприятия
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container1">
+        <h1>Мероприятия</h1>
+
+        <div class="theprog">
+            {% for event in events %}
+                {% include 'events/includes/short_story.html' %}
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock content %}

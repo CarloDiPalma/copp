@@ -23,6 +23,14 @@
                 {% include 'news/includes/short_story.html' %}
             {% endfor %}
         </div>
+
+        <h2><a href="/events/">Мероприятия</a></h2>
+
+        <div class="theprog">
+            {% for event in events %}
+                {% include 'events/includes/short_story.html' %}
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock content %}

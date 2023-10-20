@@ -1,0 +1,24 @@
+{% load thumbnail %}
+
+<div class="prog_unit_sh">
+
+    <div class="prog_image_sh">
+        {% thumbnail prog.image "300" crop="center" upscale=True as im %}
+            <img class="card-img my-2" src="{{ im.url }}">
+        {% endthumbnail %}
+    </div>
+
+    <div class="link_sh">
+        <a href="{% url 'events:event-detail' event.id %}">{{ event.name }}</a>
+    </div>
+
+    <div class="start_study_sh">
+        дата мероприятия: {{ event.date }}
+    </div>
+
+    <div class="prog_discript_sh">
+        {{ event.text }}
+    </div>
+</div>
+
+
