@@ -14,11 +14,13 @@
     </div>
 
     <div class="start_study_sh">
-        {{ prog.edu_start }}
+        Старт курса: {{ prog.edu_start }}
     </div>
 
     <div class="cost_sh">
-        {{ prog.is_free }}
+        {% if prog.is_free %}
+            Бесплатно
+        {% endif %}
     </div>
 
     <div class="prog_discript_sh">

@@ -26,12 +26,13 @@ h2 {
     font-size: 2rem;
 }
 
- .theprog{
- display:flex;
- justify-content: space-around;
- flex-wrap:wrap;
- row-gap:2rem;
- column-gap:1rem}
+.theprog {
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    row-gap:2rem;
+    column-gap:2.5rem;
+}
 
  .prog_unit_sh{
         background-color:rgba(184,182,255,.9);
@@ -41,14 +42,15 @@ h2 {
         flex-basis: 400px;
        }
 
- .link_sh{
- text-align:center}
+.link_sh a {
+    font-size: 19px;
+}
 
 .prog_unit_sh div:not(:last-child){margin-bottom: 10px}
 
- .start_study_sh{
- font-size: 1.5rem;
- text-align:center}
+.start_study_sh {
+    font-size: 13px;
+}
 
  .prog_image_sh img{
  width:100%;
