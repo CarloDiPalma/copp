@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'edu_progs.apps.EduProgsConfig',
+    'events.apps.EventsConfig',
     'news.apps.NewsConfig',
     'main.apps.MainConfig',
 
