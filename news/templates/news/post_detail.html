@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ post.h1 }}</h1>
+    <h3>{{ post.short_story }}</h3>
+    {% load thumbnail %}
+
+
+    {{ post.date }}
+    {{ post.is_free }}
+    {{ post.full_story }}
+    {% thumbnail post.image "300" crop="center" upscale=True as im %}
+        <img class="card-img my-2" src="{{ im.url }}">
+    {% endthumbnail %}
+
+{% endblock content %}
+

@@ -9,7 +9,7 @@
     </div>
 
     <div class="link_sh">
-        {{ post.title }}
+        <a href="{% url 'news:post-detail' post.id %}">{{ post.title }}</a>
     </div>
 
     <div class="prog_discript_sh">
