@@ -9,6 +9,8 @@ urlpatterns = [
     path('programs/', include('edu_progs.urls', namespace='edu_progs')),
     path('news/', include('news.urls', namespace='news')),
     path('events/', include('events.urls', namespace='events')),
+    path('auth/', include('users.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
 ]
 
