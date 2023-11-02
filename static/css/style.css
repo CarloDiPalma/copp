@@ -1,5 +1,5 @@
 body {
-    background: rgba(89,95,232,.2);
+    background: #f1f1f1;
     margin:0;
     font-family: Arial;
 }
@@ -66,10 +66,9 @@ h2 {
     text-align:right}
 
 
-.header_wrapper{
-        background-color: #f1f1f1;
-        padding-inline: 1rem;
-    }
+.header_wrapper {
+    padding-inline: 1rem;
+}
 
 .header1 {
     display:flex;
@@ -105,22 +104,22 @@ h2 {
     row-gap: 2rem;
 }
 
-.head_cont_info>h3{
-    margin: .5rem 0px;
-    color: rgb(89,110,121);
-    font-size: 1.1rem;
+.head_cont_info>h3 {
+    margin: 0px 0px 5px;
+    color: rgb(89 110 121 / 81%);
+    font-size: 14px;
     letter-spacing: .5px;
 }
 
-.head_cont_info a{
-    color: #7283c5;
-    text-decoration: underline;
-    font-size: 1rem;
-    font-style: italic;}
+.head_cont_info a {
+    color: #50667dbf;
+    font-size: 13px;
+}
 
-.head_cont_info span{
-    color: #7283c5;
-    font-size: 1rem}
+.head_cont_info div span {
+    color: #50667dbf;
+    font-size: 13px;
+}
 
 
 .sign_up{
