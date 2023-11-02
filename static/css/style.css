@@ -63,20 +63,131 @@ h2 {
  }
 
  .cost_sh{
- text-align:right}
+    text-align:right}
+
+
+.header_wrapper{
+        background-color: #f1f1f1;
+        padding-inline: 1rem;
+    }
 
 .header1 {
-    text-align:center;
-    background: rgb(104 123 195);
-    color:white;
-    font-size:4rem;
-    padding: 1rem 0;
-    box-shadow: 0px 12px 30px rgb(0 0 0 / 15%);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 1.5rem 0px;
+    align-items:center;
+    color: white;
 }
 
+.header1_copp_logo{
+    align-self: flex-start;
+    max-width: 250px;
+}
 
-footer {
-    background-color:rgb(133,154,232);
+.header1_copp_logo img{
+    max-width:100%;
+}
+
+.head_cont_block_image img{
+    width: 35px;
+}
+
+.header1_contact_line{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    text-align:center;
+    column-gap: 5rem;
+    row-gap: 2rem;
+}
+
+.head_cont_info>h3{
+    margin: .5rem 0px;
+    color: rgb(89,110,121);
+    font-size: 1.1rem;
+    letter-spacing: .5px;
+}
+
+.head_cont_info a{
+    color: #7283c5;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-style: italic;}
+
+.head_cont_info span{
+    color: #7283c5;
+    font-size: 1rem}
+
+
+.sign_up{
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #394959;
+    transition-duration: .3s;
+}
+
+.sign_up:first-child{
+    margin-bottom: .5rem;
+}
+
+.sign_up:hover{
+    background-color: black;
+}
+
+.sign_up a{
+    display: block;
+    padding: .8rem 1.4rem;}
+
+
+.header_below_wrapper{
+    background: white;
+    }
+
+.header_below{
+    max-width:1300px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #596e79;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem 0
+    }
+
+.nav_items{
+    display:flex;
+    gap:5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    }
+
+.nav_item a{
+    letter-spacing: 1px;
+    }
+
+.nav_item a:hover{
+    color:#7283c5;
+    }
+
+.user_items{
+    display:flex;
+    gap:.5rem;
+}
+
+.uitem{
+    border: 2px solid #596e79;
+    border-radius:50%;
+    padding: .7rem;
+    cursor:pointer;
+}
+
+footer{
+    background-color:#456570;
     padding: 2.5rem 0 0rem 0;
     margin-top: 3rem;
     box-shadow: 0px -10px 30px rgb(0 0 0 / 10%);
@@ -86,7 +197,8 @@ footer {
     padding: 3rem 0px 2rem 0px;
     display:flex;
     justify-content:center;
-    gap:1.3rem;
+    column-gap:1.3rem;
+    row-gap: 1.5rem;
     margin-inline:1rem;
     flex-wrap:wrap}
 
