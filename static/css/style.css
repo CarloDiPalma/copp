@@ -2,6 +2,7 @@ body {
     background: #f1f1f1;
     margin:0;
     font-family: Arial;
+    color: #596e79;
 }
 
 a {
@@ -15,13 +16,12 @@ ul {
 }
 
 h1 {
-    color: #7283c5;
     text-align:center;
     font-size: 3rem;
 }
 
 h2 {
-    color: #7283c5;
+
     text-align:center;
     font-size: 2rem;
 }
@@ -35,8 +35,7 @@ h2 {
 }
 
 .prog_unit_sh {
-    background-color:rgba(184,182,255,.9);
-    color:white;
+    background: #fff;
     padding:1.2rem;
     border-radius:20px;
     flex-basis: 400px;
@@ -53,10 +52,15 @@ h2 {
     font-size: 13px;
 }
 
- .prog_image_sh img{
- width:100%;
- max-height:250px}
+.prog_image_sh img {
+    width:100%;
+    max-height:250px
+}
 
+.program_detail_img {
+    margin: 0 auto;
+    max-height: 400px;
+}
  .prog_discript_sh{
     max-height: 200px;
     overflow: hidden;
@@ -64,6 +68,11 @@ h2 {
 
  .cost_sh{
     text-align:right}
+
+.program_detail {
+    margin: 0 auto;
+    width: 600px;
+}
 
 
 .header_wrapper {
@@ -87,7 +96,8 @@ h2 {
     max-width: 250px;
 }
 
-.header1_copp_logo img{
+.header1_copp_logo img {
+    width: 220px;
     max-width:100%;
 }
 

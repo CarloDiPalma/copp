@@ -80,16 +80,16 @@
     <div class="header_below">
     <div class="nav_items">
         <div class="nav_item">
-            <a href="">Главная</a>
+            <a href="{% url 'main:index' %}">Главная</a>
         </div>
         <div class="nav_item">
-            <a href="">Каталог</a>
+            <a href="{% url 'edu_progs:index' %}">Учебные программы</a>
         </div>
          <div class="nav_item">
-            <a href="">Новости</a>
+            <a href="{% url 'news:index' %}">Новости</a>
         </div>
         <div class="nav_item">
-            <a href="">Проекты</a>
+            <a href="{% url 'events:index' %}">Мероприятия</a>
         </div>
         <div class="nav_item">
             <a href="">РЦСТВ</a>
