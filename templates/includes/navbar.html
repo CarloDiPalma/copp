@@ -31,30 +31,22 @@
               </div>
 
               <div class="head_cont_info">
-                  <h3>
-                      Адрес
-                  </h3>
+                  <h3>Адрес</h3>
                   <div>
-                      <span>
-                          г. Владикавказ <br>ул. Галковского, дом 221
-                      </span>
+                      <span>г. Владикавказ <br>ул. Галковского, дом 221</span>
                   </div>
               </div>
           </div>
 
           <div class="head1_cont_block">
               <div class="head_cont_block_image">
-                <img src="{% static 'images/phone.svg' %}" alt="">
+                    <img src="{% static 'images/phone.svg' %}" alt="">
               </div>
 
               <div class="head_cont_info">
-                  <h3>
-                      Телефон
-                  </h3>
+                  <h3>Телефон</h3>
                   <div>
-                      <a href="tel: +7 (8672) 51-12-38">
-                        +7 (8672) 51-12-38
-                      </a>
+                      <a href="tel: +7 (8672) 51-12-38">+7 (8672) 51-12-38</a>
                   </div>
               </div>
           </div>
@@ -62,15 +54,11 @@
 
         <div class="user_auth">
             <div class="sign_up">
-                <a href="">
-                    Зарегистрироваться
-                </a>
+                <a href="{% url 'users:signup' %}">Регистрация</a>
             </div>
 
-            <div class="sign_up">
-                <a href="">
-                    Войти
-                </a>
+            <div class="login">
+                <a href="{% url 'users:login' %}">Войти</a>
             </div>
         </div>
     </header>
