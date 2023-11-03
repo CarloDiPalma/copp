@@ -1,15 +1,15 @@
 {% load thumbnail %}
 
 <div class="prog_unit_sh">
-    {{ post.h1 }}
+
     <div class="prog_image_sh">
-        {% thumbnail prog.image "300" crop="center" upscale=True as im %}
+        {% thumbnail post.image "300" crop="center" upscale=True as im %}
             <img class="card-img my-2" src="{{ im.url }}">
         {% endthumbnail %}
     </div>
 
     <div class="link_sh">
-        <a href="{% url 'news:post-detail' post.id %}">{{ post.title }}</a>
+        <a href="{% url 'news:post-detail' post.id %}">{{ post.h1 }}</a>
     </div>
 
     <div class="prog_discript_sh">
