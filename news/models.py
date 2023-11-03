@@ -32,6 +32,11 @@ class Post(models.Model):
         verbose_name='Полная новость',
         help_text='Полная новость'
     )
+    image = models.ImageField(
+        upload_to='news/images',
+        verbose_name='Изображение',
+        null=True
+    )
     date = models.DateTimeField(
         verbose_name='Дата публикации',
         help_text='Дата публикации'
