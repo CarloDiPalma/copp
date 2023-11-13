@@ -1,4 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.db import models
+
+User = get_user_model()
 
 
 class Program(models.Model):
@@ -55,3 +58,42 @@ class Program(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Order(models.Model):
+    """Заявка на программу."""
+
+    user = models.ForeignKey(
+        User,
+        verbose_name="Автор заявки",
+        on_delete=models.CASCADE
+    )
+    program = models.ForeignKey(
+        Program,
+        verbose_name="Программа в заявке",
+        on_delete=models.CASCADE
+    )
+    created = models.DateField(
+        verbose_name='Дата заявки',
+    )
+    handled = models.DateField(
+        verbose_name='Дата обработки',
+        null=True,
+        blank=True
+    )
+    is_handled = models.BooleanField(
+        verbose_name='Заявка обработана',
+        default=False
+    )
+    note = models.TextField(
+        verbose_name='Заметка для менеджера',
+        null=True,
+        blank=True
+    )
+
+    class Meta:
+        verbose_name = 'Заявка на программу'
+        verbose_name_plural = 'Заявки на программы'
+
+    def __str__(self):
+        return self.user, self.program
