@@ -80,7 +80,7 @@
     <div class="header_below">
     <div class="nav_items">
         <div class="nav_item">
-            <a href="">Главная</a>
+            <a href="/">Главная</a>
         </div>
         <div class="nav_item">
             <a href="">Каталог</a>
@@ -98,15 +98,508 @@
 
     <div class="user_items">
         <div class="uitem">
-            <a href="">
-                <img src="" alt="">12
-            </a>
+            <div style="font-size:0px">
+                <img src="{% static 'images/menu.svg' %}" alt="">
+            </div>
         </div>
-        <div class="uitem">
-            <a href="">
-                <!--<img src="" alt="">--> ЛК
-            </a>
+        <div class="uitem" title="Личный кабинет" id="lk" name="onelk">
+            <div name="onelk">ЛК</div>
         </div>
     </div>
 </div>
 </div>
+
+
+<aside class="aside_main">
+    <div class="aside_bg_div">
+        <div class="aside_profile_image">
+            <a href="" title="Перейти в мой профиль">
+                <img src="{% static 'images/no_avatar.gif' %}" alt="">
+            </a>
+
+        </div>
+        <div class="aside_profile_exit" title="Выход">
+            <a href="">
+                <img src="https://cdn-icons-png.flaticon.com/128/10024/10024277.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="aside_user_info">
+        <div class="aside_user_name">
+            <a href="">
+                Имя Пользователя
+            </a>
+        </div>
+        <div class="aside_user_role">
+            Роль пользователя
+        </div>
+        <div class="aside_copp">
+            ЦОПП РСО-Алания
+        </div>
+    </div>
+
+    <div class="aside_white_space">
+
+        <div class="all_user_side">
+            <div class="userside">
+                <div class="aside_item">
+                    Администрирование
+                </div>
+
+                <div class="aside_bird">
+                    <img src="https://cdn-icons-png.flaticon.com/128/32/32195.png" alt="" class="aside_bird_img">
+                </div>
+            </div>
+
+            <div class="userside_hidden">
+                <div class="hidden_minititle">
+                    Управление
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="">
+                            Заявки на верификацию пользователей
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Все пользователи
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Просмотр заявок на обучение
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Заявки на разработку образовательных программ
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hidden_minititle">
+                    Организации
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="">
+                            Управление организациями
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Заявки на регистрацию и редактирование организаций
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Заявки на роли организаций
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Заявки на роли кураторов в организациях
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Сотрудники организаций
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            История изменений данных организаций
+                        </a>
+                    </li>
+                </ul>
+
+                 <div class="hidden_minititle">
+                    Модерация образовательных программ и процессов
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="">
+                            Образовательные программы
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Модули образовательных программ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Образовательные процессы
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор уровней образования
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор категорий обучающихся
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор сертификатов
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hidden_minititle">
+                    Редактирование баз данных
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="">
+                            Редактор программ ЦОПП
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор компетенций WorldSkills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор компетенций ОПП
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор специальностей ФГОС
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор информационно-коммуникационных ресурсов
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор кадровых ресурсов и экспертов
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор информационно-справочных ресурсов
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор вакансий партнеров
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Редактор ситуационного центра демоэкзамена
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="hidden_minititle">
+                    Маркетплейс
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="">
+                            Маркетплейс модулей
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Отчет по маркетплейсу
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор отчета по маркетплейсу
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Биллинг ЦОПП
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hidden_minititle">
+                    Администрирование Библиотеки
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="" title="Библиотека электронных образовательных материалов">
+                            Библиотека ЭОМ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Настройки
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Редактор карточек
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Редактор поисковых полей
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Редактор профилей
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Редактор словарей
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Управление каталогами
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                           Резервное копирование и восстановление
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hidden_minititle">
+                    Администрирование портала
+                </div>
+
+                <ul class="list_revial">
+                    <li>
+                        <a href="">
+                            Импорт-экспорт пользователей
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Менеджер лицензий
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Глобальные настройки портала
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Информация об обновлениях
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+         </div>
+
+         <div class="all_user_side">
+            <div class="userside">
+                <div class="aside_item">
+                    Конструктор образовательных программ
+                </div>
+
+                <div class="aside_bird">
+                    <img src="https://cdn-icons-png.flaticon.com/128/32/32195.png" alt="" class="aside_bird_img">
+                </div>
+            </div>
+
+             <div class="userside_hidden">
+                 <div class="userside_punct">
+                     <a href="">
+                         Менеджер образовательных программ
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Менеджер модулей
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Менеджер образовательных процессов
+                     </a>
+                 </div>
+             </div>
+         </div>
+
+
+         <div class="all_user_side">
+            <div class="userside">
+                <div class="aside_item">
+                    Меню преподавателя
+                </div>
+
+                <div class="aside_bird">
+                    <img src="https://cdn-icons-png.flaticon.com/128/32/32195.png" alt="" class="aside_bird_img">
+                </div>
+            </div>
+
+             <div class="userside_hidden">
+                 <div class="userside_punct">
+                     <a href="">
+                         Мои образовательные процессы
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Мое расписание преподавателя
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Мое расписание наставника
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Тесты преподавателя
+                     </a>
+                 </div>
+             </div>
+         </div>
+
+         <div class="all_user_side">
+            <div class="userside">
+                <div class="aside_item">
+                    Мой профиль
+                </div>
+
+                <div class="aside_bird">
+                    <img src="https://cdn-icons-png.flaticon.com/128/32/32195.png" alt="" class="aside_bird_img">
+                </div>
+            </div>
+
+              <div class="userside_hidden">
+                 <div class="userside_punct">
+                     <a href="">
+                         Мои сообщения
+                     </a>
+                 </div>
+                  <div class="userside_punct">
+                     <a href="">
+                         Цифровое портфолио
+                     </a>
+                 </div>
+                  <div class="userside_punct">
+                     <a href="">
+                         Мои компетенции и профессии
+                     </a>
+                 </div>
+                  <div class="userside_punct">
+                     <a href="">
+                         Вакансии в РСО-Алания
+                     </a>
+                 </div>
+                  <div class="userside_punct">
+                     <a href="">
+                         Заявки организаций на разработку образовательных программ
+                     </a>
+                 </div>
+              </div>
+         </div>
+
+        <div class="all_user_side">
+            <div class="userside">
+                <div class="aside_item">
+                    Мое обучение
+                </div>
+
+                <div class="aside_bird">
+                    <img src="https://cdn-icons-png.flaticon.com/128/32/32195.png" alt="" class="aside_bird_img">
+                </div>
+            </div>
+
+              <div class="userside_hidden">
+                 <div class="userside_punct">
+                     <a href="">
+                         Индивидуальные образовательные траектории
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Мое расписание обучающегося
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Библиотека образовательных материалов
+                     </a>
+                 </div>
+
+                 <div class="userside_punct">
+                     <a href="">
+                         Избранные издания библиотеки
+                     </a>
+                 </div>
+             </div>
+        </div>
+    </div>
+</aside>
+
+<!--<script>-->
+<!--    document.querySelector('#lk').onclick = function(){-->
+<!--        document.querySelectorAll('.aside_main')[0].style.transform = 'translateX(0)'}-->
+
+
+<!--</script>-->

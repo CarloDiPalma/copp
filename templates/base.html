@@ -21,9 +21,14 @@
         {% endblock %}
     </title>
   </head>
-  <body>
-  <div class="container">
 
+
+
+  <body>
+
+
+
+  <div class="container">
     {% include 'includes/navbar.html' %}
 
     <main>
@@ -39,4 +44,44 @@
 
   </div>
   </body>
+
+<script>
+
+let allrest = document.querySelector('.container');
+let sideb = document.querySelectorAll('.aside_main')[0];
+let userside = document.querySelectorAll('.userside');
+let hiddenside = document.querySelectorAll('.userside_hidden');
+
+
+for(let i=0; i<userside.length;i++){
+  userside[i].onclick = ()=>{hiddenside[i].classList.toggle('showit')}
+}
+
+
+ document.querySelector('#lk').onclick = function(){
+        sideb.style.transform = 'translateX(0%)';
+}
+
+
+
+document.onclick = (eve) =>{ console.log(eve.target.classList.contains('userside'));
+ document.querySelector('.aside_main').onclick = ()=>{sideb.style.transform = 'translateX(0%)';}
+    if(
+    (eve.target.innerText != 'ЛК')&&
+    (!eve.target.classList.contains('userside'))&&
+    (!eve.target.classList.contains('aside_item'))&&
+    (!eve.target.classList.contains('aside_bird'))&&
+    (!eve.target.classList.contains('aside_bird'))&&
+    (!eve.target.classList.contains('aside_bird_img'))
+    )
+    {
+         sideb.style.transform = 'translateX(100%)';
+    }
+}
+
+
+
+
+
+</script>
 </html>
