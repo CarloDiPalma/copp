@@ -5,14 +5,34 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ program.name }}</h1>
-    <h3>{{ program.description }}</h3>
+
+
+<div class="prog_detail_adjust">
+
+    <h1 class="prog_detail_h1">{{ program.name }}</h1>
+
+    <div class="prog_detail_date">
+        <span>
+            {{ program.edu_start }}
+        </span>
+    </div>
+
+   <div class="is_prog_free">
+        {{ program.is_free }}
+   </div>
+
+    <div class="prog_descript">
+        {{ program.description }}
+    </div>
+
+<!--    <div>-->
+<!--        {{ program.text }}-->
+<!--    </div>-->
+</div>
+
     {% load thumbnail %}
 
 
-    {{ program.edu_start }}
-    {{ program.is_free }}
-    {{ program.text }}
     {% thumbnail prog.image "300" crop="center" upscale=True as im %}
         <img class="card-img my-2" src="{{ im.url }}">
     {% endthumbnail %}
