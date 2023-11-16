@@ -29,16 +29,6 @@ class Program(models.Model):
     reg_end = models.DateField(
         verbose_name='Дата конца регистрации',
     )
-    edu_start = models.DateField(
-        verbose_name='Дата начала обучения',
-    )
-    edu_end = models.DateField(
-        verbose_name='Дата конца обучения',
-    )
-    hours = models.PositiveSmallIntegerField(
-        default=0,
-        verbose_name='Трудоёмкость'
-    )
     is_intramural = models.BooleanField(
         verbose_name='Очная форма',
         default=True

@@ -85,7 +85,7 @@ LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'main:index'
 # LOGOUT_REDIRECT_URL = 'main:index'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'Europe/Moscow'
 
