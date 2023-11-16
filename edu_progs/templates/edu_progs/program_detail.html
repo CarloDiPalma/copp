@@ -20,6 +20,8 @@
         <div class="prog_discript_sh">
             {{ program.text }}
         </div>
+
+        <a href="{% url 'edu_progs:program-form' program.id %}">форма</a>
     </div>
 {% endblock content %}
 

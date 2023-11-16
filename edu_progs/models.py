@@ -1,5 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+
 
 User = get_user_model()
 
@@ -62,21 +64,31 @@ class Program(models.Model):
 
 class Order(models.Model):
     """Заявка на программу."""
-
-    user = models.ForeignKey(
-        User,
-        verbose_name="Автор заявки",
-        on_delete=models.CASCADE
+    name = models.CharField(
+        max_length=100,
+        verbose_name="Имя заявителя",
+        null=True
     )
     program = models.ForeignKey(
         Program,
         verbose_name="Программа в заявке",
         on_delete=models.CASCADE
     )
-    created = models.DateField(
-        verbose_name='Дата заявки',
+    phone = PhoneNumberField(
+        verbose_name="Номер телефона",
+        help_text="Номер телефона",
+        null=False,
+        blank=False
     )
-    handled = models.DateField(
+    email = models.EmailField(
+        verbose_name="Почта",
+        max_length=254
+    )
+    created = models.DateTimeField(
+        verbose_name='Дата заявки',
+        auto_now_add=True
+    )
+    handled = models.DateTimeField(
         verbose_name='Дата обработки',
         null=True,
         blank=True
@@ -96,4 +108,5 @@ class Order(models.Model):
         verbose_name_plural = 'Заявки на программы'
 
     def __str__(self):
-        return self.user, self.program
+        return f'{self.name} {str(self.phone)} {self.email}'
+
