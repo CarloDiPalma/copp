@@ -5,7 +5,7 @@ from .models import Order, Program
 
 
 class OrderForm(forms.ModelForm):
-    phone = PhoneNumberField()
+    phone = PhoneNumberField(label='Телефон')
 
     class Meta:
         model = Order
