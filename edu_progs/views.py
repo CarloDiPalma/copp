@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 
 from edu_progs.forms import OrderForm
-from edu_progs.models import Program
+from edu_progs.models import Order, Program
 
 
 def index(request):
@@ -24,6 +25,14 @@ def program_form(request, pk):
         order = form.save(commit=False)
         order.program = program
         order.save()
-        return redirect('edu_progs:index')
+        print(order.pk)
+        return redirect(reverse('edu_progs:program-order-success', kwargs={'pk': order.pk}))
     context = {'program': program, 'form': form}
     return render(request, 'edu_progs/program_form.html', context)
+
+
+def program_order_success(request, pk):
+    order = Order.objects.get(id=pk)
+
+    context = {'order': order}
+    return render(request, 'edu_progs/program_order_success.html', context)

@@ -15,8 +15,11 @@
             {% endthumbnail %}
         </div>
 
-        {{ program.edu_start }}
-        {{ program.is_free }}
+        Конец регистрации: {{ program.reg_end }}
+
+        {% if program.is_free %}
+            Программа бесплатна
+        {% endif %}
         <div class="prog_discript_sh">
             {{ program.text }}
         </div>
