@@ -1,6 +1,12 @@
 from django.contrib import admin
+from django.contrib.admin import TabularInline
 
 from .models import Post, PostImage
+
+
+class PostImageInline(TabularInline):
+    model = PostImage
+    extra = 1
 
 
 @admin.register(Post)
@@ -9,6 +15,7 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('h1',)
     list_filter = ('date',)
     empty_value_display = '-пусто-'
+    inlines = (PostImageInline,)
 
 
 @admin.register(PostImage)

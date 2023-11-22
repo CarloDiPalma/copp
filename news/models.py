@@ -76,3 +76,6 @@ class PostImage(models.Model):
     class Meta:
         verbose_name = 'Изображение в посте'
         verbose_name_plural = 'Изображения в постах'
+
+    def __str__(self):
+        return str(self.image)
