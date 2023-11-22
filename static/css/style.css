@@ -276,3 +276,21 @@ margin-inline: .5rem}
 .prelast_foot{
 padding: 1.2rem 0;
 border-top: 1px solid white}
+
+.news-detail {
+    margin: 0 auto;
+    width: 700px;
+}
+.post-main-img {
+    display: block;
+    margin:0 auto;
+}
+
+.news-post-many-img {
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.news-post-many-img img{
+    width: 180px;
+}

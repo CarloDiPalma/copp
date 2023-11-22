@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Post, PostImage
 
 
 def index(request):
@@ -11,5 +11,7 @@ def index(request):
 
 def post_detail(request, pk):
     post = Post.objects.get(id=pk)
-    context = {'post': post}
+    images = PostImage.objects.filter(post=post)
+    print(images)
+    context = {'post': post, 'images': images}
     return render(request, 'news/post_detail.html', context)
