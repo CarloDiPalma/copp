@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 
 class Post(models.Model):
@@ -51,3 +52,27 @@ class Post(models.Model):
 
     def __str__(self):
         return self.h1
+
+
+def get_image_filename(instance, filename):
+    title = instance.post.title
+    slug = slugify(title)
+    return "news/images/%s-%s" % (slug, filename)
+
+
+class PostImage(models.Model):
+    """Изображение в новостном посте."""
+    post = models.ForeignKey(
+        Post,
+        default=None,
+        on_delete=models.CASCADE,
+        verbose_name='Пост, в котором будет изображение'
+    )
+    image = models.ImageField(
+        upload_to='news/images',
+        verbose_name='Image'
+    )
+
+    class Meta:
+        verbose_name = 'Изображение в посте'
+        verbose_name_plural = 'Изображения в постах'

@@ -5,17 +5,23 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ post.h1 }}</h1>
-    <h3>{{ post.short_story }}</h3>
-    {% load thumbnail %}
+    <div class="news-detail">
+        <h1>{{ post.h1 }}</h1>
+        {% load thumbnail %}
+        {% thumbnail post.image "300" crop="center" upscale=True as im %}
+            <img class="post-main-img" src="{{ im.url }}">
+        {% endthumbnail %}
 
 
-    {{ post.date }}
-    {{ post.is_free }}
-    {{ post.full_story }}
-    {% thumbnail post.image "300" crop="center" upscale=True as im %}
-        <img class="card-img my-2" src="{{ im.url }}">
-    {% endthumbnail %}
-
+        {{ post.date }}
+        {{ post.is_free }}
+        {{ post.full_story }}
+        <br>
+        <div class="news-post-many-img">
+            {% for image in images %}
+                <img src="{{ image.image.url }}">
+            {% endfor %}
+        </div>
+    </div>
 {% endblock content %}
 
