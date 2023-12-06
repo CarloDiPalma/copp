@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +24,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
 
     'sorl.thumbnail',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -93,11 +95,16 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static_root/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+
+CKEDITOR_BASEPATH = "/static_root/ckeditor/ckeditor/"
+
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media/"
