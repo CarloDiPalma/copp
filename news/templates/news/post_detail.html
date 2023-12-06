@@ -15,7 +15,7 @@
 
         {{ post.date }}
         {{ post.is_free }}
-        {{ post.full_story }}
+        {{ post.full_story |safe }}
         <br>
         <div class="news-post-many-img">
             {% for image in images %}
