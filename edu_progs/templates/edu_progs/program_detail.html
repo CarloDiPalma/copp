@@ -7,7 +7,7 @@
 {% block content %}
     <div class="program_detail">
         <h1>{{ program.name }}</h1>
-        <h3>{{ program.description }}</h3>
+        <h3>{{ program.description |safe }}</h3>
         {% load thumbnail %}
         <div>
             {% thumbnail program.image "800" crop="center" upscale=True as im %}
@@ -21,7 +21,7 @@
             Программа бесплатна
         {% endif %}
         <div class="prog_discript_sh">
-            {{ program.text }}
+            {{ program.text |safe }}
         </div>
 
         <a href="{% url 'edu_progs:program-form' program.id %}">форма</a>
