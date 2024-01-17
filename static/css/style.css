@@ -211,6 +211,111 @@ h2 {
     cursor:pointer;
 }
 
+
+/* SLIDER */
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 580px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  height: 580px;
+  position: relative;
+}
+
+.slide img {
+    width: 100%;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  margin-bottom: 15px;
+  line-height: 28px;
+  max-width: 750px;
+}
+
+.go-button {
+  font-size: 15px;
+  padding: 8px 12px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.slider-btn {
+  position: absolute;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px 17px;
+  border: none;
+  outline: none;
+  bottom: 10px;
+}
+
+.prev-btn {
+  right: 95px; /* Отступ от правого края слайдера */
+}
+
+.next-btn {
+  right: 40px; /* Отступ от правого края слайдера */
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 27px; /* Поднимаем точки выше */
+  right: 154px; /* Отступ от правого края слайдера */
+  display: flex;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: purple;
+}
+
+/* SLIDER END */
+
 footer{
     background-color:#456570;
     padding: 2.5rem 0 0rem 0;
