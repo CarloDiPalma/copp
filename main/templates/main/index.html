@@ -19,6 +19,8 @@
             {% endfor %}
         </div>
 
+        {% include 'main/includes/numbers.html' %}
+
         <h2><a href="/news/">Новости</a></h2>
 
         <div class="theprog">
@@ -35,10 +37,6 @@
             {% endfor %}
         </div>
 
-        <div class="theprog">
-            <br>
-            Всего охвачего людей: {{ people }}
-        </div>
     </div>
 
 {% endblock content %}
