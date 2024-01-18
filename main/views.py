@@ -7,9 +7,9 @@ from .models import People
 
 
 def index(request):
-    progs = Program.objects.filter().order_by('-id')[:3][::-1]
-    posts = Post.objects.filter().order_by('-id')[:3][::-1]
-    events = Event.objects.filter().order_by('-id')[:3][::-1]
+    progs = Program.objects.filter().order_by('-id')[:4][::-1]
+    posts = Post.objects.filter().order_by('-id')[:4][::-1]
+    events = Event.objects.filter().order_by('-id')[:4][::-1]
     people = People.objects.get(id=1).count
     context = {
         'progs': progs,
