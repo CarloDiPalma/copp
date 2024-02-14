@@ -10,7 +10,10 @@ def index(request):
     progs = Program.objects.filter().order_by('-id')[:4][::-1]
     posts = Post.objects.filter().order_by('-id')[:4][::-1]
     events = Event.objects.filter().order_by('-id')[:4][::-1]
-    people = People.objects.get(id=1).count
+    try:
+        people = People.objects.get(id=1).count
+    except:
+        people = 76398
     context = {
         'progs': progs,
         'posts': posts,
