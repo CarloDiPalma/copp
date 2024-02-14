@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-&*2wknetbmd-l_zng46z!3xa7^6(7u#27929xma=^ae95c#^lj
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -36,6 +36,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_TRUSTED_ORIGINS = ["http://192.168.10.250"]
 
 ROOT_URLCONF = 'copp.urls'
 
