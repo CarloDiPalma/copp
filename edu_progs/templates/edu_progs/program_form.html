@@ -7,8 +7,6 @@
 {% block content %}
     <div class="program_detail">
         <h1>{{ program.name }}</h1>
-
-
         {% load user_filters %}
         {% if form.errors %}
           {% for field in form %}
@@ -31,6 +29,7 @@
                     <span class="required text-danger">*</span>
                   {% endif %}
                 </label>
+                <br>
                 {{ field|addclass:'form-control' }}
                 {% if field.help_text %}
                   <small
@@ -42,8 +41,7 @@
                 {% endif %}
               </div>
           {% endfor %}
-
-          <div class="d-flex justify-content-end">
+          <div class="d-flex justify-content-end submit-btn">
             <button type="submit" class="btn btn-primary">
               {% if is_edit %}
                 Сохранить

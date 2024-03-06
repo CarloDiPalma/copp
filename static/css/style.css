@@ -60,10 +60,10 @@ h2 {
     margin: 0 auto;
     max-height: 400px;
 }
- .prog_discript_sh{
+.prog_discript_sh {
     max-height: 200px;
     overflow: hidden;
- }
+}
 
  .cost_sh{
     text-align:right}
@@ -167,11 +167,11 @@ h2 {
     width: 600px;
 }
 
-.header_below_wrapper{
+.header_below_wrapper {
     background: white;
     }
 
-.header_below{
+.header_below {
     max-width:1300px;
     margin: 0 auto;
     display:flex;
@@ -181,7 +181,7 @@ h2 {
     font-size: 1rem;
     font-weight: bold;
     padding: .5rem 0
-    }
+}
 
 .nav_items{
     display:flex;
@@ -192,18 +192,18 @@ h2 {
 
 .nav_item a{
     letter-spacing: 1px;
-    }
+}
 
-.nav_item a:hover{
+.nav_item a:hover {
     color:#7283c5;
-    }
+}
 
-.user_items{
+.user_items {
     display:flex;
     gap:.5rem;
 }
 
-.uitem{
+.uitem {
     border: 2px solid #596e79;
     border-radius:50%;
     padding: 5px;
@@ -332,7 +332,7 @@ h2 {
 
 .sub-block {
     width: 25%;
-    padding: 10px;
+    padding: 50px 10px 0px;
     box-sizing: border-box;
 }
 
@@ -436,4 +436,16 @@ border-top: 1px solid white}
 
 .news-post-many-img img{
     width: 180px;
+}
+
+/* FORM */
+
+.form-group {
+    width: 250px;
+    margin: 0 auto 10px;
+}
+
+.submit-btn {
+    width: 250px;
+    margin: 18px auto 10px;
 }
