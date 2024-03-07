@@ -1,7 +1,7 @@
 {% load static %}
 
 <div class="header_wrapper">
-<header class="header1">
+    <header class="header1">
         <div class="header1_copp_logo">
             <a href="/"><img src="{% static 'images/1.png' %}" alt="Центр опережающей профессиональной подготовки РСО-Алания"></a>
         </div>
@@ -51,16 +51,26 @@
               </div>
           </div>
         </div>
-
-        <div class="user_auth">
-            <div class="sign_up">
-                <a href="{% url 'users:signup' %}">Регистрация</a>
+        <!-- Logged In -->
+        {% if request.user.is_authenticated %}
+            <div class="header__user">
+                <a href="/">
+                  <p><span>{{request.user.email}}</span></p>
+                </a>
+                <a href="{% url 'logout' %}">Выйти</a>
             </div>
+        {% else %}
+        <!-- Not Logged In -->
+            <div class="user_auth">
+                <div class="sign_up">
+                    <a href="{% url 'users:signup' %}">Регистрация</a>
+                </div>
 
-            <div class="login">
-                <a href="{% url 'users:login' %}">Войти</a>
+                <div class="login">
+                    <a href="{% url 'users:login' %}">Войти</a>
+                </div>
             </div>
-        </div>
+        {% endif %}
     </header>
 </div>
 

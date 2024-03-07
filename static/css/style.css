@@ -169,7 +169,7 @@ h2 {
 
 .header_below_wrapper {
     background: white;
-    }
+}
 
 .header_below {
     max-width:1300px;
@@ -183,7 +183,11 @@ h2 {
     padding: .5rem 0
 }
 
-.nav_items{
+.header__user a {
+    color: #000;
+}
+
+.nav_items {
     display:flex;
     gap:5rem;
     font-family: 'Montserrat';
@@ -191,7 +195,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.nav_item a{
+.nav_item a {
     letter-spacing: 1px;
 }
 
