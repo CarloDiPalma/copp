@@ -6,9 +6,8 @@ from django.contrib.auth.base_user import AbstractBaseUser
 
 class UserManager(BaseUserManager):
     def _create_user(self, email, password, **extra_fields):
-        '''Create and save a user with the given email, and
-        password.
-        '''
+        """Create and save a user with the given email, and
+        password."""
         if not email:
             raise ValueError('The given email must be set')
 
@@ -87,14 +86,35 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    """Кастомный юзер"""
+    """Кастомный юзер."""
+
+    USER_ROLE = 'user'
+    ORGANIZATION_ROLE = 'organization'
+    ADMIN_ROLE = 'admin'
+    TEACHER_ROLE = 'teacher'
+    STUDENT_ROLE = 'student'
+
+    ROLE_CHOICES = (
+        (USER_ROLE, 'Пользователь'),
+        (ORGANIZATION_ROLE, 'Организация'),
+        (ADMIN_ROLE, 'Администратор'),
+        (TEACHER_ROLE, 'Преподаватель'),
+        (STUDENT_ROLE, 'Обучающийся')
+    )
+
     username = None
     email = models.EmailField(unique=True, max_length=254)
     first_name = models.CharField(max_length=150, blank=True, null=False)
     last_name = models.CharField(max_length=150, blank=True, null=False)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    is_admin = models.BooleanField(default=False)
+    # is_admin = models.BooleanField(default=False)
+    role = models.CharField(
+        max_length=20,
+        choices=ROLE_CHOICES,
+        default=USER_ROLE,
+        blank=True
+    )
 
     objects = UserManager()
 
@@ -105,3 +125,23 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
         ordering = ["-id"]
+
+    @property
+    def is_admin(self):
+        return self.role == User.ADMIN_ROLE
+
+    @property
+    def is_organization(self):
+        return self.role == User.ORGANIZATION_ROLE
+
+    @property
+    def is_user(self):
+        return self.role == User.USER_ROLE
+
+    @property
+    def is_teacher(self):
+        return self.role == User.TEACHER_ROLE
+
+    @property
+    def is_student(self):
+        return self.role == User.STUDENT_ROLE

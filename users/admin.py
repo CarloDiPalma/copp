@@ -9,12 +9,12 @@ class CustomUserAdmin(UserAdmin):
 
 @admin.register(User)
 class UserAdmin(CustomUserAdmin):
-    list_display = ('pk', 'email', 'is_active', 'last_name')
+    list_display = ('pk', 'email', 'is_active', 'last_name', 'role')
     search_fields = ('last_name', 'email')
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('first_name', 'last_name')}),
-        ('Permissions', {'fields': ('is_admin', 'is_staff', 'groups', 'user_permissions')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'role')}),
+        ('Permissions', {'fields': ('is_staff', 'groups', 'user_permissions')}),
     )
     add_fieldsets = (
         (None, {
