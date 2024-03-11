@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'main.apps.MainConfig',
     'users.apps.UsersConfig',
+    'vacancy.apps.VacancyConfig',
 
     'sorl.thumbnail',
     'ckeditor'
@@ -99,9 +100,7 @@ USE_TZ = True
 
 STATIC_URL = 'static_root/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
