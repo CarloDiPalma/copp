@@ -23,6 +23,6 @@ def index(request):
         'posts': posts,
         'events': events,
         'people': people,
-        'vacancues': vacancies
+        'vacancies': vacancies
     }
     return render(request, 'main/index.html', context)
