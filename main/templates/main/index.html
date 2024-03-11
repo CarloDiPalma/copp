@@ -37,6 +37,14 @@
             {% endfor %}
         </div>
 
+        <h2><a href="/vacancies/">Вакансии</a></h2>
+
+        <div class="theprog">
+            {% for vacancy in vacancies %}
+                {% include 'vacancies/includes/short_story.html' %}
+            {% endfor %}
+        </div>
+
     </div>
 
 {% endblock content %}

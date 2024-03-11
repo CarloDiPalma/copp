@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ event.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ event.name }}</h1>
+    <h3>{{ event.description |safe }}</h3>
+    {% load thumbnail %}
+
+    {{ event.duration }}
+    {{ event.date }}
+    {{ event.text |safe }}
+    {% thumbnail event.image "300" crop="center" upscale=True as im %}
+        <img class="card-img my-2" src="{{ im.url }}">
+    {% endthumbnail %}
+
+{% endblock content %}
+
