@@ -285,7 +285,7 @@ h2 {
   padding: 8px 17px;
   border: none;
   outline: none;
-  bottom: 10px;
+  bottom: 20px;
 }
 
 .prev-btn {
@@ -298,7 +298,7 @@ h2 {
 
 .slider-dots {
   position: absolute;
-  bottom: 27px; /* Поднимаем точки выше */
+  bottom: 37px; /* Поднимаем точки выше */
   right: 154px; /* Отступ от правого края слайдера */
   display: flex;
 }
