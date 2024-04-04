@@ -1,11 +1,15 @@
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-&*2wknetbmd-l_zng46z!3xa7^6(7u#27929xma=^ae95c#^lj'
 
-DEBUG = True
+load_dotenv()
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+ENVIRONMENT = os.getenv('ENVIRONMENT', default='production')
+DEBUG = os.getenv('DEBUG', default=False)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -61,13 +65,24 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'copp.wsgi.application'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if ENVIRONMENT == 'production' or ENVIRONMENT == 'local_pg':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('POSTGRES_DB', default='postgres'),
+            'USER': os.getenv('POSTGRES_USER', default='postgres'),
+            'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),
+            'HOST': os.getenv('DB_HOST', default='127.0.0.1'),
+            'PORT': os.getenv('DB_PORT', default='5432'),
+        }
     }
-}
+elif ENVIRONMENT == 'local_sqlite':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
