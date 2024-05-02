@@ -9,6 +9,7 @@
           Войти на сайт
         </div>
         <div class="card-body">
+          <div class="danger_style">
           {% if form.errors %}
               {% for field in form %}
                 {% for error in field.errors %}
@@ -23,6 +24,7 @@
                 </div>
               {% endfor %}
           {% endif %}
+          </div>
 
           <form method="post"
             {% if action_url %}
@@ -45,7 +47,7 @@
                     <span class="required text-danger">*</span>
                   {% endif %}
               </label>
-              <div>
+              <div class="input_wrapper">
               {{ field|addclass:'form-control' }}
                 {% if field.help_text %}
                   <small id="{{ field.id_for_label }}-help" class="form-text text-muted">

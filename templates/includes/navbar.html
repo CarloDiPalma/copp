@@ -14,11 +14,11 @@
             </div>
 
               <div class="head_cont_info">
-                  <h3>
+                  <h3 class="makeWhite">
                       Email
                   </h3>
                   <div>
-                      <a href="mailto: copp15@mail.ru">
+                      <a href="mailto: copp15@mail.ru" class="makeWhite">
                         copp15@mail.ru
                       </a>
                   </div>
@@ -31,9 +31,9 @@
               </div>
 
               <div class="head_cont_info">
-                  <h3>Адрес</h3>
+                  <h3 class="makeWhite">Адрес</h3>
                   <div>
-                      <span>г. Владикавказ <br>ул. Галковского, дом 221</span>
+                      <span class="makeWhite">г. Владикавказ <br>ул. Галковского, дом 221</span>
                   </div>
               </div>
           </div>
@@ -44,9 +44,9 @@
               </div>
 
               <div class="head_cont_info">
-                  <h3>Телефон</h3>
+                  <h3 class="makeWhite">Телефон</h3>
                   <div>
-                      <a href="tel: +7 (8672) 51-12-38">+7 (8672) 51-12-38</a>
+                      <a href="tel: +7 (8672) 51-12-38" class="makeWhite">+7 (8672) 51-12-38</a>
                   </div>
               </div>
           </div>
@@ -96,14 +96,23 @@
 
     <div class="user_items">
         <div class="uitem">
-            <a href="">
-                <img src="" alt="">12
+            <a href="http://127.0.0.1:8000/">
+                <img src="{% static 'images/glases.svg' %}" alt="">
             </a>
         </div>
         <div class="uitem">
             <a href="">
-                <!--<img src="" alt="">--> ЛК
+                <img src="{% static 'images/search.svg' %}" alt="">
             </a>
+        </div>
+        <div class="uitem" id="theme_mode">
+            <div>
+                <img src="{% static 'images/mode_night.svg' %}" alt="" id="change_theme">
+            </div>
+        </div>
+
+        <div class="searchInput">
+            <input type="search" placeholder="Поиск">
         </div>
     </div>
 </div>

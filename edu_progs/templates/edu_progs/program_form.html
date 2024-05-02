@@ -6,23 +6,33 @@
 
 {% block content %}
     <div class="program_detail">
-        <h1>{{ program.name }}</h1>
-        {% load user_filters %}
-        {% if form.errors %}
-          {% for field in form %}
-            {% for error in field.errors %}
+        <h1 class="formProgName">{{ program.name }}</h1>
+
+     {% load user_filters %}
+              {% if form.errors %}   
+        <div class="danger_style" style="margin-bottom: 30px;">
+      
+          <div class="alert alert-danger">
+            
+               {% for field in form %}
+                {% for error in field.errors %}
+                  {{ error }} 
+                {% endfor %}
+              {% endfor %}
+              {% for error in form.non_field_errors %}
                 {{ error }}
-            {% endfor %}
-          {% endfor %}
-          {% for error in form.non_field_errors %}
-              {{ error }}
-          {% endfor %}
-        {% endif %}
+              {% endfor %}
+              
+          </div>
+
+        </div>
+    {% endif %}
+
         <form method="post" enctype="multipart/form-data" action="">
           <input type="hidden" name="csrfmiddlewaretoken" value="">
           {% csrf_token %}
           {% for field in form %}
-              <div class="form-group row my-3 p-3">
+              <div class="form-group row my-3 p-3 program_form">
                 <label for="{{ field.id_for_label }}">
                   {{ field.label }}
                   {% if field.field.required %}

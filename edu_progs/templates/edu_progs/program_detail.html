@@ -6,16 +6,20 @@
 
 {% block content %}
     <div class="program_detail">
-        <h1>{{ program.name }}</h1>
-        <h3>{{ program.description |safe }}</h3>
+        <h1 class="progName">{{ program.name }}</h1>
+        <h3 class="progH3">{{ program.description |safe }}</h3>
         {% load thumbnail %}
         <div>
             {% thumbnail program.image "800" crop="center" upscale=True as im %}
                 <img class="program_detail_img" src="{{ im.url }}">
+                <!-- <img class="program_detail_img" src="https://int.world-camps.org/wp-content/uploads/2022/07/IMG-Tennis-Girls-photo-2.jpg"> -->
             {% endthumbnail %}
         </div>
 
-        Конец регистрации: {{ program.reg_end }}
+        <div class="endRegistration">
+            Конец регистрации: <span>{{ program.reg_end }}</span> 
+        </div>
+        
 
         {% if program.is_free %}
             Программа бесплатна
@@ -24,7 +28,10 @@
             {{ program.text |safe }}
         </div>
 
-        <a href="{% url 'edu_progs:program-form' program.id %}">форма</a>
+        <div class="progFormLink">
+            <a href="{% url 'edu_progs:program-form' program.id %}">Заполнить форму</a>
+        </div>
+        
     </div>
 {% endblock content %}
 

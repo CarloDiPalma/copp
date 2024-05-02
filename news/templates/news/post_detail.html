@@ -4,24 +4,52 @@
   {{ post.title }}
 {% endblock %}
 
-{% block content %}
-    <div class="news-detail">
-        <h1>{{ post.h1 }}</h1>
-        {% load thumbnail %}
-        {% thumbnail post.image "300" crop="center" upscale=True as im %}
-            <img class="post-main-img" src="{{ im.url }}">
-        {% endthumbnail %}
+{% block content %} 
+
+{% load thumbnail %}
+{% thumbnail post.image "300" crop="center" upscale=True as im %}
+    <div class="news-detail" style='
+    background: url("https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg")
+    center center;
+    ;
+
+    '> <!-- <img class="post-main-img" src="{{ im.url }}"> -->
+{% endthumbnail %}
+
+        <div class="news-detail-inner">
+            <div class="infoInFrontOfImage">
+                <h1>{{ post.h1 }}</h1>
+                <div class="ndi_date">
+                    {{ post.date }}
+                </div>
+                <div class="ndi_isFree ">
+                    {{ post.is_free }}
+                </div>
+            </div>
+            
+            <!-- {% load thumbnail %} -->
+            <!-- {% thumbnail post.image "300" crop="center" upscale=True as im %} -->
+                <!-- <img class="post-main-img" src="{{ im.url }}"> -->
+            <!-- {% endthumbnail %} -->
+        </div>
 
 
-        {{ post.date }}
-        {{ post.is_free }}
-        {{ post.full_story |safe }}
-        <br>
-        <div class="news-post-many-img">
-            {% for image in images %}
-                <img src="{{ image.image.url }}">
-            {% endfor %}
+    </div>
+
+    <div class="fullStory">
+        <div class="fullStory_inner_text">
+            {{ post.full_story |safe }}
+        </div>
+
+        <div class="full_story_inner_images">
+            <div class="news-post-many-img">
+                {% for image in images %}
+                    <img src="https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg">  <!--<img src="{{ image.image.url }}">-->
+                {% endfor %}
+            </div>
         </div>
     </div>
+
+
 {% endblock content %}
 
