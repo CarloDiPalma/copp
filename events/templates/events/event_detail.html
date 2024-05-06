@@ -5,16 +5,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class="detail-container">
-        <h1>{{ event.name }}</h1>
-        <h3>{{ event.description |safe }}</h3>
-        {% load thumbnail %}
-        {{ event.duration }}
-        {{ event.date }}
-        {{ event.text |safe }}
+
+{% load thumbnail %}
+{% thumbnail event.image "300" crop="center" upscale=True as im %}
+    <div class="detail-container event-detail news-detail" 
+    style='background-image: url("{{ im.url }}")'>
+{% endthumbnail %}
+        <div class="event-detail-inner">
+            <h1>{{ event.name }}</h1>
+            <div class="ndi_date">
+                {{ event.date }} <br><br>
+                {{ event.duration }}
+            </div>
+        </div>
+        
+        <!-- {% load thumbnail %}
         {% thumbnail event.image "300" crop="center" upscale=True as im %}
             <img class="card-img my-2" src="{{ im.url }}">
-        {% endthumbnail %}
+        {% endthumbnail %} -->
+
+    </div>
+
+    <div class="fullStory">
+        <div class="fullStory_inner_text">
+            <h2 class="event-detail-h2">
+                {{ event.description |safe }}
+            </h2>
+            <p class="event-detail-p">
+                {{ event.text |safe }}
+            </p>
+            
+        </div>
     </div>
 
 {% endblock content %}

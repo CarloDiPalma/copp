@@ -9,11 +9,9 @@
 {% load thumbnail %}
 {% thumbnail post.image "300" crop="center" upscale=True as im %}
     <div class="news-detail" style='
-    background: url("https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg")
-    center center;
-    ;
-
-    '> <!-- <img class="post-main-img" src="{{ im.url }}"> -->
+    background-image: url("{{ im.url }}")'> 
+    
+    <!-- <img class="post-main-img" src="{{ im.url }}"> -->
 {% endthumbnail %}
 
         <div class="news-detail-inner">
@@ -44,7 +42,11 @@
         <div class="full_story_inner_images">
             <div class="news-post-many-img">
                 {% for image in images %}
-                    <img src="https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg">  <!--<img src="{{ image.image.url }}">-->
+                    <!-- <img src="https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg">   -->
+                    <img src="{{ image.image.url }}">
+                    <!-- <img src="{{ image.image.url }}"> -->
+                    <!-- <img src="https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg"> 
+                    <img src="https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg">  -->
                 {% endfor %}
             </div>
         </div>

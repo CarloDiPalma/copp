@@ -8,13 +8,17 @@
         {% endthumbnail %}
     </div>
 
-    <div class="link_sh">
-        <a href="{% url 'news:post-detail' post.id %}">{{ post.h1 }}</a>
+    <div class="card_inner_text">
+        <div class="link_sh">
+            <a href="{% url 'news:post-detail' post.id %}">{{ post.h1 }}</a>
+        </div>
+
+        <div class="prog_discript_sh">
+            {{ post.short_story |safe }}
+        </div>
     </div>
 
-    <div class="prog_discript_sh">
-        {{ post.short_story |safe }}
-    </div>
+
 </div>
 
 
