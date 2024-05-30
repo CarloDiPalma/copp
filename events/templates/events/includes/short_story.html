@@ -8,17 +8,22 @@
         {% endthumbnail %}
     </div>
 
-    <div class="link_sh">
-        <a href="{% url 'events:event-detail' event.id %}">{{ event.name }}</a>
+
+    <div class="card_inner_text">
+        <div class="link_sh">
+            <a href="{% url 'events:event-detail' event.id %}">{{ event.name }}</a>
+        </div>
+
+        <div class="start_study_sh">
+            дата мероприятия: {{ event.date }}
+        </div>
+
+        <div class="prog_discript_sh">
+            {{ event.text | safe }}
+        </div>
     </div>
 
-    <div class="start_study_sh">
-        дата мероприятия: {{ event.date }}
-    </div>
 
-    <div class="prog_discript_sh">
-        {{ event.text | safe }}
-    </div>
 </div>
 
 

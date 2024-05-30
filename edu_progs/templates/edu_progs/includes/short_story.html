@@ -7,23 +7,25 @@
             <img class="card-img my-2" src="{{ im.url }}">
         {% endthumbnail %}
     </div>
+    
+    <div class="card_inner_text">
+        <div class="link_sh">
+            <a href="{% url 'edu_progs:program-detail' prog.id %}">{{ prog.name }}</a>
+        </div>
 
-    <div class="link_sh">
-        <a href="{% url 'edu_progs:program-detail' prog.id %}">{{ prog.name }}</a>
-    </div>
+        <div class="start_study_sh">
+            Конец регистрации: {{ prog.reg_end}}
+        </div>
 
-    <div class="start_study_sh">
-        Конец регистрации: {{ prog.reg_end}}
-    </div>
+        <div class="cost_sh">
+            {% if prog.is_free %}
+                Бесплатно
+            {% endif %}
+        </div>
 
-    <div class="cost_sh">
-        {% if prog.is_free %}
-            Бесплатно
-        {% endif %}
-    </div>
-
-    <div class="prog_discript_sh">
-        {{ prog.description |safe }}
+        <div class="prog_discript_sh">
+            {{ prog.description |safe }}
+        </div>
     </div>
 </div>
 

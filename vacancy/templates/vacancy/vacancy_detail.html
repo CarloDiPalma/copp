@@ -5,14 +5,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="detail-container">
-        <h1>{{ vacancy.title }}</h1>
+
+    <!-- vacancy-detail-container -->
+
+    <div class="detail-container vacancy-detail-container program_detail">
+        <h1 class="progName">{{ vacancy.title }}</h1>
         <h3>{{ vacancy.description |safe }}</h3>
         {% load thumbnail %}
 
+      <div class="vacancy-doptext">
         {{ vacancy.duration }}
         {{ vacancy.date }}
         {{ vacancy.text |safe }}
+      </div>
+        
     </div>
 {% endblock content %}
 
