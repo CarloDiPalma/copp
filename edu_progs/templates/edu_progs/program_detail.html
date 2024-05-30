@@ -9,7 +9,7 @@
         <h1 class="progName">{{ program.name }}</h1>
         <h3 class="progH3">{{ program.description |safe }}</h3>
         {% load thumbnail %}
-        <div>
+        <div style="text-align: center;">
             {% thumbnail program.image "800" crop="center" upscale=True as im %}
                 <img class="program_detail_img" src="{{ im.url }}">
                 <!-- <img class="program_detail_img" src="https://int.world-camps.org/wp-content/uploads/2022/07/IMG-Tennis-Girls-photo-2.jpg"> -->

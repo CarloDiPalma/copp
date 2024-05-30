@@ -13,6 +13,10 @@
             <a href="{% url 'edu_progs:program-detail' prog.id %}">{{ prog.name }}</a>
         </div>
 
+        <div class="prog_discript_sh">
+            {{ prog.description |safe }}
+        </div>
+
         <div class="start_study_sh">
             Конец регистрации: {{ prog.reg_end}}
         </div>
@@ -21,10 +25,6 @@
             {% if prog.is_free %}
                 Бесплатно
             {% endif %}
-        </div>
-
-        <div class="prog_discript_sh">
-            {{ prog.description |safe }}
         </div>
     </div>
 </div>
