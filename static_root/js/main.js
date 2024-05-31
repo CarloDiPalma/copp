@@ -2,11 +2,11 @@ let currentSlide = 0;
 let slideInterval;
 
 function startSlider() {
-  slideInterval = setInterval(nextSlide, 7000); // Вызываем nextSlide каждые 7 секунд (7000 миллисекунд)
+  slideInterval = setInterval(nextSlide, 7000);
 }
 
 function stopSlider() {
-  clearInterval(slideInterval); // Останавливаем интервал, чтобы прекратить автоматическое переключение слайдов
+  clearInterval(slideInterval);
 }
 
 function showSlide(index) {
@@ -36,10 +36,8 @@ function updateDots() {
   });
 }
 
-// Добавляем обработчики событий для начала и остановки слайдера при наведении мыши
-const sliderContainer = document.querySelector('.slider-container');
+let sliderContainer = document.querySelector('.slider-container');
 sliderContainer.addEventListener('mouseenter', stopSlider);
 sliderContainer.addEventListener('mouseleave', startSlider);
 
-// Запускаем слайдер
 startSlider();

@@ -11,7 +11,7 @@ POSTS_NUMBER = 4
 
 def index(request):
     progs = Program.objects.filter().order_by('-id')[:POSTS_NUMBER][::-1]
-    posts = Post.objects.filter().order_by('-id')[:POSTS_NUMBER][::-1]
+    posts = Post.objects.filter(is_published=True).order_by('-id')[:POSTS_NUMBER][::-1]
     events = Event.objects.filter().order_by('-id')[:POSTS_NUMBER][::-1]
     vacancies = Vacancy.objects.filter().order_by('-id')[:POSTS_NUMBER][::-1]
     try:

@@ -3,7 +3,7 @@ from .models import Post, PostImage
 
 
 def index(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(is_published=True)
 
     context = {'posts': posts}
     return render(request, 'news/index.html', context)
