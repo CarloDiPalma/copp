@@ -7,6 +7,8 @@ from vacancy.models import Vacancy
 from .models import People
 
 POSTS_NUMBER = 4
+PEOPLE_OBJ_ID = 1
+PEOPLE_COUNT_EXCEPT = 96398
 
 
 def index(request):
@@ -15,9 +17,9 @@ def index(request):
     events = Event.objects.filter().order_by('-id')[:POSTS_NUMBER][::-1]
     vacancies = Vacancy.objects.filter().order_by('-id')[:POSTS_NUMBER][::-1]
     try:
-        people = People.objects.get(id=1).count
+        people = People.objects.get(id=PEOPLE_OBJ_ID).count
     except:
-        people = 76398
+        people = PEOPLE_COUNT_EXCEPT
     context = {
         'progs': progs,
         'posts': posts,
